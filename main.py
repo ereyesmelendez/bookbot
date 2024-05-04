@@ -33,7 +33,5 @@ def get_book_text(path):
     with open("/home/edrick/workspace/github.com/ereyesmelendez/bookbot/books/frankenstein.txt") as f:
         return f.read()
 
-#def get_report(letter_nums):
-
 
 main()
