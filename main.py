@@ -4,10 +4,11 @@ def main():
     num_words = get_num_words(text)
     num_letters = get_num_total_letters(text)
     letter_nums = get_num_each_letter(text)
+    print("--- Begin report of books/ fraknstein.txt ---")
     print(f"{num_words} words found in the document")
-    print(f"{num_letters} letters found in the document")
     for letter, count in sorted(letter_nums.items()):
-            print(f"{letter}: {count}")
+            print(f"The '{letter}' character was found {count} times")
+    print("--- End report ---")
 
 def get_num_words(text):
     words = text.split()
@@ -32,8 +33,7 @@ def get_book_text(path):
     with open("/home/edrick/workspace/github.com/ereyesmelendez/bookbot/books/frankenstein.txt") as f:
         return f.read()
 
+#def get_report(letter_nums):
 
-#def get_average_letters_per_word(text):
-    #average = num_letters / num_words
 
 main()
